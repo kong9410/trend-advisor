@@ -28,7 +28,7 @@ for filename in filename_list:
 file_data = dict()
 json_data = dict()
 cnt_key = dict()
-
+kkma = Kkma()
 filepath = './dict/'
 keydict = td.noun_dictation(filepath)
 j = 0
@@ -39,10 +39,9 @@ for content in contents:
             summ = textrank.summarize(3)
             summ = "\n".join(summ)
             # 요약본에서 키워드 추출
-            summ_keywords = tr.TextRank(summ)
-            keywords = summ_keywords.keywords()
+            keywords = kkma.nouns(summ)
             keywords = keydict.isit_item(keywords)
-
+            
             if len(keywords) != 0:
                 print("keywords: ",keywords)
                 file_data["id"] = content[0]

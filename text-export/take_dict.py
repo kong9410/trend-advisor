@@ -6,6 +6,7 @@ class noun_dictation():
             self.pronoun = pd.read_csv(file_path + "proper-noun.csv", header=None, encoding="cp949")
             self.brand = pd.read_csv(file_path + "brand.csv", header=None, encoding="cp949")
             self.product = pd.read_csv(file_path+"product-name.csv", header=None, encoding="cp949")
+            self.search = pd.read_csv(file_path+"dataset_all.csv", header=None, encoding="cp949")
             print("successfully imported csv file")
         except:
             print("failed read to csv")
@@ -19,14 +20,10 @@ class noun_dictation():
         # 키워드가 브랜드, 고유명사, 제품명에 속하는지 확인
         real_keywords = []
         for ki in keywords:
-            #if ki in self.brand[0].values:
+            #if ki in self.product[0].values:
             #    real_keywords.append(ki)
             #    continue
-            # 고유명사는 필요없을 것 같아서 지웠습니다.
-            #if ki in self.pronoun[0].values:
-            #    real_keywords.append(ki)
-            #    continue
-            if ki in self.product[0].values:
+            if ki in self.search[0].values:
                 real_keywords.append(ki)
                 continue
         # 키워드는 리스트형태로 반환됩니다.
