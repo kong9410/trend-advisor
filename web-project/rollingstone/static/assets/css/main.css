@@ -5,12 +5,12 @@
      background:transparent;
 }
 .navbar-default.scrolled{
-     background:rgba(79, 180, 65, 0.603);
+     background:white;
      border:none;
 }
 .navbar-fixed-top{
     overflow:hidden;
-    background: rgb(80, 150, 84);
+    background: white;
     border:none;
 }
 .navbar-header{
@@ -25,25 +25,27 @@
 }
 
 .navbar-nav > .active > a{
-    background-color:rgb(39, 83, 41) !important;
+    background-color:rgb(126, 187, 216) !important;
+    color: rgb(76, 79, 235);
 }
 .navbar-nav > .active > a:hover{
-    color:rgb(76, 235, 89);
+    color:rgb(76, 79, 235);
 }
 
 
 .navbar-header a{
-    color:white;
+    color:black;
 }
 
 .nav.navbar-nav li a{
-    color:white;
+    color:rgb(103, 153, 199);
 }
 .nav.navbar-nav li a:visited{
-    color:white;
+    color:rgb(33, 65, 70);
+    text-decoration: none;
 }
 .nav.navbar-nav li a:hover{
-    color:rgb(76, 235, 89);
+    color:rgb(31, 56, 80);
 }
 
 .search-area{
@@ -55,11 +57,12 @@
 
 .main-search input[type="text"],
 .main-search .form-control{
-    background: transparent;
+    background: white;
     border:none;
     border-radius: 0;
     border-bottom: 1px solid #000000;
     box-shadow: none;
+    color:black;
     -webkit-box-shadow: none;
 }
 
@@ -67,6 +70,11 @@
 .main-search .form-control:focus{
     -webkit-box-shadow: none;
     box-shadow: none;
+}
+
+.main-search input[type="text"]::placeholder
+{
+    color:black;
 }
 
 /*원주 작업 부분*/
